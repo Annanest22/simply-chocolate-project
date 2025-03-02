@@ -131,7 +131,7 @@
                 <h4 class="overlay-title">MILK</h4>
                     <ul class="overlay-list">
                         <li class="overlay-list-item"><button class="overlay-button-orange" type="button">milk</button></li>
-                        <li class="overlay-list-item"><button class="overlay-button-white"type="button">the benefits</button></li>
+                        <li class="overlay-list-item"><button class="overlay-button-white" type="button">the benefits</button></li>
                     </ul>
                 <p class="overlay-desc">Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food.Early-lactation milk, which is called colostrum, contains antibodies that strengthen the immune system.</p>
             </div>
@@ -260,5 +260,65 @@
     </div>
    </footer>
    <!-- #endregion footer -->
+
+   <!-- #region backdrop  -->
+   <div class="backdrop is-open">
+    <div class="modal">
+        <button class="close-btn" type="button">
+            <svg class="close-btn-icon" width="28" height="28">
+              <use href="./images/icons.svg#btn-close"></use>
+            </svg>
+        </button>
+        <p class="modal-text">
+            LEAVE A REVIEW ABOUT <span class="orange">OUR CHOCOLATE</span>
+        </p>
+        <form class="modal-form">
+            <div class="modal-container-block">
+                <label class="modal-form-label" id="user-text" for="">Name</label>
+                <div class="modal-form-input-cont">
+                    <input class="modal-form-input" required id="user-text" title="Anna" pattern="[a-zA-Za-яА-ЯіІїЇєЄ']+"
+                    name="user-text" placeholder="Anna" type="text">
+                    <svg class="modal-form-icon" width="24" height="24">
+                      <use href="./images/icons.svg#user"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-container-block">
+                <label class="modal-form-label" id="user-text" for="user-email">Email</label>
+                <div class="modal-form-input-cont">
+                    <input class="modal-form-input" required id="user-email" title="test@gmail.com" 
+                    name="user-email" placeholder="test@gmail.com" type="email">
+                    <svg class="modal-form-icon" width="24" height="24">
+                      <use href="./images/icons.svg#mail"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-container-block">
+                <label class="modal-form-label" id="user-phone" for="user-phone">Phone number</label>
+                <div class="modal-form-input-cont">
+                    <input class="modal-form-input" required id="user-text" title="XXX-XXX-XX-XX" 
+                    name="user-phone" placeholder="XXX-XXX-XX-XX" type="tel">
+                    <svg class="modal-form-icon" width="24" height="24">
+                      <use href="./images/icons.svg#phone"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="cont-user-text">
+                <label class="modal-form-label" for="user-comment">Comment</label>
+                <textarea name="" placeholder="Enter text" id="user-comment" class="user-comment"></textarea>
+            </div>
+            <div class="modal-form-con-checkbox">
+                <input type="checkbox" class="checkbox visually-hidden" id="user-checkbox">
+                <label class="label-checkbox" for="user-checkbox"><span class="custom-checkbox">
+                    <svg class="" width="10" height="10">
+                      <use href="./images/icons.svg#checkmark"></use>
+                    </svg>
+                </span>I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+            </div>
+            <button class="btn-form" type="submit">Send</button>
+        </form>
+    </div>
+   </div>
+   <!-- #endregion backdrop -->
 </body>
 </html>
