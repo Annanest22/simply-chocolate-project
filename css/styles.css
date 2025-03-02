@@ -742,18 +742,19 @@ pointer-events: auto;
     position: absolute;
     top: 24px;
     right: 24px;
-
     padding: 0;
     border: 0;
     line-height: 0;
     stroke: #1E1823;
+    transition: stroke 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: transparent;
 }
 
 .close-btn:focus,
 .close-btn:hover {
-    fill: #fd9222;
+    stroke: #fd9222;
 }
+
 .close-btn-icon {
 
 }
@@ -765,6 +766,8 @@ pointer-events: auto;
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #111;
+    margin-bottom: 42px;
+    width: 298px;
 }
 .modal-container-block {
     margin-bottom: 18px;
@@ -787,7 +790,7 @@ margin-bottom: 8px;
     height: 68px;
 padding: 22px 24px;
 padding-left: 62px;
-outline: none;
+outline: transparent;
 border-radius: 13px;
 border: 1px solid rgba(17, 17, 17, 0.05);
 }
@@ -809,9 +812,14 @@ color: rgba(64, 64, 64, 0.3);
     cursor: pointer;
 }
 
-.modal-form-input:focus + .modal-form-icon {
+.modal-form-input:focus {
+border-color: #fd9222;
+}
+
+.modal-form-input:focus+.modal-form-icon {
     stroke: #fd9222;
 }
+
 .btn-form {
     font-weight: 600;
 font-size: 14px;
@@ -825,6 +833,11 @@ background: #fd9222;
 margin-top: 40px;
 }
 
+.btn-form:focus, .btn-form:hover {
+    color: #fd9222;
+    background-color:#FCF1E0 ;  
+}
+
 .custom-checkbox {
     border-radius: 6px;
 border: 1px solid rgba(17, 17, 17, 0.14);
@@ -835,24 +848,26 @@ justify-content: center;
 align-items: center;
 background-color: transparent;
 margin-right: 12px;
+fill: transparent;
 }
+
 .label-checkbox {
     cursor: pointer;
     font-weight: 400;
 font-size: 14px;
 letter-spacing: -0.02em;
 color: rgba(64, 64, 64, 0.6);
-fill: transparent;
 }
 
 .label-checkbox a {
     text-decoration: underline;
     color: #fd9222;
 }
-.check-box:checked + .label-checkbox .custom-checkbox {
+
+.checkbox:checked + .label-checkbox>.custom-checkbox {
 background-color: #fd9222;
 border: transparent;
-fill: aqua;
+fill: #fafafa;
 }
 
 .cont-user-text {
@@ -860,7 +875,7 @@ fill: aqua;
 }
 
 .user-comment {
-    border: 1px solid rgba(17, 17, 17, 17);
+    border: 1px solid rgba(17, 17, 17, 0.05);
 border-radius: 13px;
 padding: 22px 24px 22px 24px;
 width: 436px;
