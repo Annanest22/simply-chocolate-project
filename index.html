@@ -233,7 +233,7 @@
                 <p class="love-list-text">Chocolate is a family favourite treat. Love the delicious smooth chocolate and the creaminess inside. The wafer is soft but crunchy.</p>
             </li>
         </ul>
-        <button class="love-btn" type="button">Leave a review</button>
+        <button class="love-btn" type="button" data-modal-open>Leave a review</button>
     </div>
    </section>
    <!-- #endregion love -->
@@ -254,17 +254,23 @@
             <ul class="nav-header-list">
                 <li class="nav-header-item"><a class="footer-nav-item-link" href="#">Home</a></li>
                 <li class="nav-header-item"><a class="footer-nav-item-link" href="#">How it's made?</a></li>
-                <li class="nav-header-item"><a class="footer-nav-item-link" href="#">Chocolate is loved</a></li>
+                <li class="nav-header-item"><a class="footer-nav-item-link" href="#">Chocolate is loved</a></li><div class="subscribe-container">
+        <label for="">
+            <input class="subscribe-placeholder" type="text" title="user-email" name="user-email" id="user-email" placeholder="Enter your email"></label>
+    <button class="subscribe-btn" type="submit" >Subscribe</button>
+    </div>
             </ul>
         </nav>
     </div>
+    
+
    </footer>
    <!-- #endregion footer -->
 
    <!-- #region backdrop  -->
-   <div class="backdrop is-open">
+   <div class="backdrop" data-modal>
     <div class="modal">
-        <button class="close-btn" type="button">
+        <button class="close-btn" type="button" data-modal-close>
             <svg class="close-btn-icon" width="28" height="28">
               <use href="./images/icons.svg#btn-close"></use>
             </svg>
@@ -320,5 +326,6 @@
     </div>
    </div>
    <!-- #endregion backdrop -->
+   <script src="./js/modal.js"></script>
 </body>
 </html>
